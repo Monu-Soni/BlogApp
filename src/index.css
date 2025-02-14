@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+footer,
+section,
+.width {
+    width: -webkit-fill-available;
+}
+
+.width,
+footer {
+    background: rgba(42 161 44);
+}
+
+.flexClass {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+}
+
+@media (max-width:640px) {
+    .menubar {
+        display: inline-flex;
+        position: fixed;
+        top: 4rem;
+        background: green;
+        height: auto;
+        width: 100%;
+    }
+}
+
+ul li a {
+    cursor: pointer;
+}

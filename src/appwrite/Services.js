@@ -59,8 +59,8 @@ export class services {
     }
 
     getFilePreview(fileId) {
-        try {return this.Bucket.getFilePreview(config.bucketId, fileId)}
-        catch (error) {console.log(`Image error:: ${error}`);}
+        try {return this.Bucket.getFileView(config.bucketId, fileId)}
+        catch (error) {console.log(`Image error:: ${error}`)}
     }
 }
 

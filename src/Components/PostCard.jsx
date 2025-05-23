@@ -1,7 +1,6 @@
 import Service from "../appwrite/Services"
 import { Link } from 'react-router-dom'
 import parse from 'html-react-parser'
-import React from 'react'
 
 function PostCard({ $id, title, content, images }) {
 

@@ -2,13 +2,12 @@ import { Link, useNavigate } from 'react-router-dom'
 import BLOGS from "../../assets/BLOGS.png"
 import { useSelector } from 'react-redux'
 import LogoutBtn from "./LogoutBtn"
-import React, { useState, useEffect, useRef } from 'react'
+import { useState } from 'react'
 
 function Header() {
     const authStatus = useSelector((state) => state.Auth.status)
     const [menuOpen, setMenuOpen] = useState(false)
     const Navigate = useNavigate()
-    const menuRef = useRef(null)
 
     const handleNavClick = (slug) => {
         Navigate(slug)

@@ -34,7 +34,7 @@ export default function Post() {
     return post ? (
         <div className="py-8">
             <div className="relative flex justify-center mb-4 p-6 border rounded-xl w-full">
-                <img src={Services.getFilePreview(post.images)} alt={post.title} className="rounded-xl" />
+                <img src={Services.getFilePreview(post.images)} alt="enable cookies to se photos" className="rounded-xl" />
                 {isAuthor && (
                     <div className="top-2 right-6 absolute">
                         <Link to={`/edit-post/${post.$id}`}>

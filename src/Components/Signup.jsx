@@ -4,7 +4,7 @@ import { logIn } from '../Store/authSlice'
 import { useDispatch } from 'react-redux'
 import { useForm } from 'react-hook-form'
 import { Button, Input } from './index'
-import React, { useState } from 'react'
+import { useState } from 'react'
 
 function Signup() {
     const { register, handleSubmit } = useForm()
@@ -40,7 +40,6 @@ function Signup() {
                 />
             </div>
             <div className='m-auto w-1/6'><Button type='submit' >Submit</Button></div>
-            {error && <p className="mt-8 text-center text-red-600">{error}</p>}
         </form>
     )
 }

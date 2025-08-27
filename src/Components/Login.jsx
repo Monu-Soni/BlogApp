@@ -4,7 +4,7 @@ import AuthService from '../appwrite/Auth'
 import { useDispatch } from 'react-redux'
 import { useForm } from 'react-hook-form'
 import { Button, Input } from './index'
-import React, { useState } from 'react'
+import { useState } from 'react'
 
 function Login() {
 
@@ -35,7 +35,6 @@ function Login() {
                         Sign Up
                     </Link>
                 </p>
-                {error && <p className="mt-8 text-center text-red-600">{error}</p>}
                 <Input label={"Email"} type={"email"} placeholder={"Email"}
                     {...register("email", { required: true })}
                 />

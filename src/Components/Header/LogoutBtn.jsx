@@ -13,7 +13,7 @@ function Button() {
         Navigate("/")
     }
 
-    return (<Btn onClick={Logout}>Log Out</Btn>)
+    return (<Btn onClick={Logout} className="hover:text-white">Log Out</Btn>)
 }
 
 export default Button

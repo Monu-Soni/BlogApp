@@ -50,8 +50,8 @@ function Header() {
                 <div className='ml-4 w-12'>
                     <Link to="/"><img className='rounded-full' src={BLOGS} alt="blogs" /></Link>
                 </div>
-                <div className='inline-flex z-30 sm:hidden  mr-4'>
-                    <Button onClick={() => setMenuOpen(!menuOpen)}>
+                <div className='inline-flex z-30 sm:hidden mr-4'>
+                    <Button onClick={() => setMenuOpen(!menuOpen)} className={"hover:text-white"}>
                         {menuOpen ? "X" : "Menu"}
                     </Button>
                 </div>
@@ -60,7 +60,7 @@ function Header() {
                     {
                         navItems.map((item) => item.active ? (
                             <div key={item.name}>
-                                <Button
+                                <Button className="hover:text-white"
                                     onClick={() => {
                                         Navigate(item.slug)
                                         handleNavClick(item.slug)

@@ -8,9 +8,8 @@ section,
     width: -webkit-fill-available;
 }
 
-.width,
-footer {
-    background: rgba(42 161 44);
+.bgColor {
+    background: #106EBE;
 }
 
 .flexClass {
@@ -24,14 +23,21 @@ footer {
 @media (max-width:640px) {
     .menubar {
         display: inline-flex;
+        flex-direction: column;
         position: fixed;
         top: 4rem;
-        background: green;
+        right: 0;
+        padding-bottom: 1rem;
+        background: #106ebe5e;
         height: auto;
-        width: 100%;
+        width: 40%;
     }
 }
 
 ul li a {
     cursor: pointer;
+}
+form input {
+    z-index: 10;
+    background: transparent;
 }

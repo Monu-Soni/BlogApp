@@ -1,10 +1,9 @@
-import React from 'react'
 
-function Button({children, bgColor, ...props}) {
+function Button({ children, className, bgColor, ...props }) {
   return (
-    <div className='inline'>
+    <div className='inline px-2 py-2'>
       <button type="submit" {...props}
-        className="hover:border-gray-600 hover:bg-slate-600 mr-1 px-3 py-1 border border-blue-500 rounded-md text-black hover:text-white transition-all">
+        className={`mr-1 text-xl hover:underline text-[#0FFCBE] transition-all hover:text-white ${className}`}>
         {children}
       </button>
     </div>

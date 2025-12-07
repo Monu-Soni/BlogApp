@@ -18,12 +18,18 @@ export class authService {
             if (userData) { return this.Login({ email, password }) }
             else { return userData; }
         }
-        catch (error) { console.log("error in creating account", error) }
+        catch (error) {
+            alert("error in creating account or invalid param")
+            console.log(error);
+        }
     }
 
     async Login({ email, password }) {
         try { return await this.account.createEmailPasswordSession(email, password) }
-        catch (error) { console.log(" Login failed", error) }
+        catch (error) {
+            alert("Login failed or invalid param")
+            console.log(error)
+        }
     }
 
     async getCurrentUser() {

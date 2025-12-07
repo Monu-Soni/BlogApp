@@ -5,7 +5,7 @@ import React from 'react'
 
 function Footer() {
     return (
-        <footer className='z-5 relative overflow-hidden py-10 border border-t-black'>
+        <footer className='z-5 relative bgColor py-10'>
             <div className="relative z-10 max-w-7xl mx-3 -my-5 px-4 flex flex-wrap content-between">
                 <div className="w-full h-60 p-6 flex flex-col justify-between md:w-1/2 lg:w-5/12">
                     <div className="mb-4 inline-flex items-center"><Logo width="100px" /></div>

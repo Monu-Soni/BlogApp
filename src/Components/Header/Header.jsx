@@ -2,6 +2,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import BLOGS from "../../assets/BLOGS.png"
 import { useSelector } from 'react-redux'
 import LogoutBtn from "./LogoutBtn"
+import { Button } from '../index'
 import { useState } from 'react'
 
 function Header() {
@@ -12,7 +13,7 @@ function Header() {
     const handleNavClick = (slug) => {
         Navigate(slug)
         if (window.innerWidth < 640) {
-          setMenuOpen(false)
+            setMenuOpen(false)
         }
     }
 
@@ -44,30 +45,32 @@ function Header() {
         },
     ]
     return (
-        <header className='h-16'>
-            <div className='z-50 fixed flexClass justify-between shadow-md h-16 text-base width'>
+        <header className='h-16 shadow-md'>
+            <div className='z-50 fixed flexClass justify-between shadow-md h-16 text-base width bgColor'>
                 <div className='ml-4 w-12'>
                     <Link to="/"><img className='rounded-full' src={BLOGS} alt="blogs" /></Link>
                 </div>
-                <button className='inline-flex z-30 sm:hidden bg-white mr-4 p-1 text-green-600 bold'
-                    onClick={() => setMenuOpen(!menuOpen)}>
-                    {menuOpen ? "Close" : "Menu"}
-                </button>
+                <div className='inline-flex z-30 sm:hidden  mr-4'>
+                    <Button onClick={() => setMenuOpen(!menuOpen)}>
+                        {menuOpen ? "X" : "Menu"}
+                    </Button>
+                </div>
                 <div className={`sm:inline-flex flex-row flex-wrap content-center items-center
                     ${menuOpen ? "menubar" : "hidden"}`} >
                     {
                         navItems.map((item) => item.active ? (
-                            <div className='px-2 py-2' key={item.name}>
-                                <button onClick={() => {
-                                    Navigate(item.slug)
-                                    handleNavClick(item.slug)} }
-                                    className='bg-white hover:bg-gray-300 mr-1 px-4 py-2 rounded-md transition-all'>
+                            <div key={item.name}>
+                                <Button
+                                    onClick={() => {
+                                        Navigate(item.slug)
+                                        handleNavClick(item.slug)
+                                    }}>
                                     {item.name}
-                                </button>
+                                </Button>
                             </div>
                         ) : null
                         )}
-                    {authStatus && (<div className='mx-8'><LogoutBtn /></div>)}
+                    {authStatus && (<div className='mx-4'><LogoutBtn /></div>)}
                 </div>
             </div>
         </header>

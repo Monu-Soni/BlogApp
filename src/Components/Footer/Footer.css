@@ -7,7 +7,7 @@ h3{
 ul li a{
     --tw-text-opacity: 1;
     color: rgb(17 24 39 / var(--tw-text-opacity));
-     font-size: 1rem /* 16px */;
+     font-size: 1rem;
     line-height: 1.5rem;
     font-weight: 500;
 }

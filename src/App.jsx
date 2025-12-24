@@ -1,4 +1,4 @@
-import { Header, Footer } from './Components/index'
+import { Header } from './Components/index'
 import { logIn, logOut } from './Store/authSlice'
 import { useState, useEffect } from 'react'
 import { Outlet } from "react-router-dom"
@@ -17,12 +17,9 @@ function App() {
   }, [])
 
   return !Loading ? (
-    <section className="flex flex-col justify-between bg-gray-400 w-full min-h-screen">
+    <section className="flex flex-col w-full">
       <Header />
-      <main className='min-h-[90vh]'>
-        <Outlet />
-      </main>
-      <Footer />
+      <main className='min-h-calc'><Outlet /></main>
     </section>
   ) : null
 }

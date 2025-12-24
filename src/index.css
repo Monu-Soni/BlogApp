@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 footer,
 section,
 .width {
@@ -37,7 +41,18 @@ section,
 ul li a {
     cursor: pointer;
 }
+.min-h-calc{
+    min-height: calc(100vh - 4rem);
+}
+
 form input {
     z-index: 10;
+    border: 1px solid rgba(167, 159, 159, 0.633);
     background: transparent;
+    transition: border-color 0.3s ease;
+}
+
+form input:focus {
+    outline: none;
+    border: 2px solid rgba(167, 159, 159, 0.633);
 }

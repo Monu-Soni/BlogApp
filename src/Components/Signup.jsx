@@ -25,8 +25,9 @@ function Signup() {
     }
 
     return (
-        <form onSubmit={handleSubmit(Signup)} className='bg-[#106EBE] text-[#0FFCBE] mx-auto mt-8 mb-8 rounded-2xl w-4/5 md:w-1/2 h-96'>
-            <div className='p-6'>
+        <form onSubmit={handleSubmit(Signup)}
+            className='flex flex-wrap justify-center content-center m-2 min-h-[85vh]'>
+            <div className='p-6 bg-[#106EBE] text-[#0FFCBE] rounded-2xl w-4/5 md:w-2/5 h-[28rem]'>
                 <p className="mt-2 text-base text-[#0FFCBE] text-center">
                     Already have an account?&nbsp;
                     <Link to="/login" className="font-medium text-primary hover:underline transition-all duration-200">
@@ -49,9 +50,9 @@ function Signup() {
                     {errors.password &&
                         <span className='absolute top-1/2 left-4 text-red-600 text-sm z-0'>{errors.password.message}</span>}
                 </div>
-            </div>
-            <div className='text-center'>
-                <Button type='submit' className="text-[#106EBE] bg-[#0FFCBE] hover:bg-white hover:text-[#106EBE] rounded-full px-6 py-1">Submit</Button>
+                <div className='text-center mt-8'>
+                    <Button type='submit'className="text-[#106EBE] bg-[#0FFCBE] hover:bg-white hover:text-[#106EBE] rounded-full px-6 py-1">Submit</Button>
+                </div>
             </div>
         </form>
     )

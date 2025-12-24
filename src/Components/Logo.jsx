@@ -1,5 +1,5 @@
-import logo from "../assets/BLOGS.png"
+import BLOGS from "/BLOGS.png"
 
-function Logo() { return (<div className='w-28'><img className='rounded-full' src={logo} alt="logo" /></div>) }
+function Logo() { return (<img id="eUVORkEd0zb1" className='rounded-full' src={BLOGS} alt="logo" />) }
 
 export default Logo

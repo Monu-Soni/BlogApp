@@ -6,6 +6,7 @@ import { Provider } from 'react-redux'
 import Store from './Store/Store.js'
 import App from './App.jsx'
 import './index.css'
+import Profile from './Components/Profile.jsx'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -17,6 +18,7 @@ const router = createBrowserRouter(
       <Route path='/add-post' element={<AuthLayout authentication>{""}<AddPost /></AuthLayout>} />
       <Route path='/edit-post/:slug' element={<AuthLayout authentication>{""}<EditPost /></AuthLayout>} />
       <Route path='/post/:slug' element={<Post />} />
+      <Route path='/profile' element={<Profile />} />
     </Route>
   )
 )

@@ -1,12 +1,11 @@
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom'
 import { AddPost, AllPost, EditPost, Home, Post } from "./pages/index.js"
-import { Login, Signup, AuthLayout } from "./Components/index.js"
+import { Login, Signup, AuthLayout, Profile } from "./Components/index.js"
 import { createRoot } from 'react-dom/client'
 import { Provider } from 'react-redux'
 import Store from './Store/Store.js'
 import App from './App.jsx'
 import './index.css'
-import Profile from './Components/Profile.jsx'
 
 const router = createBrowserRouter(
   createRoutesFromElements(

@@ -1,8 +1,8 @@
-import { logOut } from '../../Store/authSlice'
+import { logOut } from '../Store/authSlice'
 import { useNavigate } from 'react-router-dom'
-import AuthService from '../../appwrite/Auth'
+import AuthService from '../appwrite/Auth'
 import { useDispatch } from 'react-redux'
-import { Button as Btn } from '../index'
+import { Button as Btn } from './index'
 
 function Button() {
     const Dispatch = useDispatch()
@@ -13,7 +13,7 @@ function Button() {
         Navigate("/")
     }
 
-    return (<Btn onClick={Logout} className="hover:text-white">Log Out</Btn>)
+    return (<Btn className={"text-red-600"} onClick={Logout}>Log Out</Btn>)
 }
 
 export default Button

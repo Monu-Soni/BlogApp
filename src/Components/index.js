@@ -9,5 +9,7 @@ import PostForm from "./PostForm";
 import RTE from "./RTE";
 import Select from "./Select"
 import Signup from "./Signup";
+import LogoutBtn from './LogoutBtn'
+import Profile from "./Profile"
 
-export { Header, Button, Input, AuthLayout, Login, Logo, PostCard, PostForm, RTE, Select, Signup }
+export { Header, Button, Input, AuthLayout, Login, Logo, PostCard, PostForm, RTE, Select, Signup, LogoutBtn, Profile }

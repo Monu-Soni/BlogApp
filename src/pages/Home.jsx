@@ -3,7 +3,6 @@ import { PostCard, Button } from '../Components/index'
 import Service from "../appwrite/Services";
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import img from "/pito.avif"
 
 function Home() {
   const authStatus = useSelector((state) => state.Auth.status)

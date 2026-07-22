@@ -11,13 +11,21 @@ function AllPosts() {
         })
     }, [])
 
-    return (
-        <div className='py-8 w-full'>
-            <div className='flex flex-wrap justify-center sm:justify-start'>
-                {posts.map((post) => (<div key={post.$id} className='p-2 sm:w-[300px]'><PostCard {...post} /></div>))}
+    if (posts.length === 0) {
+        return (
+            <div className="text-center">
+                <h1 className="font-bold text-2xl text-gray-500">No Post To Show</h1>
             </div>
-        </div>
-    )
+        )
+    } else {
+        return (
+            <div className='py-8 w-full'>
+                <div className='flex flex-wrap justify-center sm:justify-start'>
+                    {posts.map((post) => (<div key={post.$id} className='p-2 sm:w-[300px]'><PostCard {...post} /></div>))}
+                </div>
+            </div>
+        )
+    }
 }
 
 export default AllPosts

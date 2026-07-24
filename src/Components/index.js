@@ -1,15 +1,14 @@
-import Header from "./Header/Header";
-import Button from "./Button";
-import Input from "./Input";
-import AuthLayout from "./AuthLayout";
-import Login from "././Login";
-import Logo from "./Logo";
-import PostCard from "./PostCard";
-import PostForm from "./PostForm";
-import RTE from "./RTE";
-import Select from "./Select"
-import Signup from "./Signup";
-import LogoutBtn from './LogoutBtn'
+import LogoutBtn from "./utils/LogoutBtn.jsx"
+import Select from "./utils/Select"
+import Button from "./utils/Button"
+import Input from "./utils/Input"
+import PostCard from "./PostCard"
+import PostForm from "./PostForm"
 import Profile from "./Profile"
+import Logo from "./utils/Logo"
+import RTE from "./utils/RTE"
+import Header from "./Header"
+import Signup from "./Signup"
+import Login from "././Login"
 
-export { Header, Button, Input, AuthLayout, Login, Logo, PostCard, PostForm, RTE, Select, Signup, LogoutBtn, Profile }
+export { Header, LogoutBtn, PostCard, PostForm, Profile, Select, Signup, Login, Button, Input, Logo, RTE, }

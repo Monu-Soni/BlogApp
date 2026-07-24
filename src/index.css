@@ -41,7 +41,8 @@ section,
 ul li a {
     cursor: pointer;
 }
-.min-h-calc{
+
+.min-h-calc {
     min-height: calc(100vh - 4rem);
 }
 

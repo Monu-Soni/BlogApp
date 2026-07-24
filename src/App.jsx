@@ -1,11 +1,11 @@
-import { Header } from './Components/index'
-import { logIn, logOut } from './Store/authSlice'
-import { useState, useEffect } from 'react'
+import { logIn, logOut } from "./Store/authSlice"
+import { Header } from "./Components/index"
+import { useState, useEffect } from "react"
 import { Outlet } from "react-router-dom"
-import AuthService from './appwrite/Auth'
-import { useDispatch } from 'react-redux'
+import AuthService from "./appwrite/Auth"
+import { useDispatch } from "react-redux"
 
-function App() {
+export default function App() {
   const [Loading, setLoading] = useState(true)
   const Dispatch = useDispatch()
 
@@ -19,9 +19,7 @@ function App() {
   return !Loading ? (
     <section className="flex flex-col w-full">
       <Header />
-      <main className='min-h-calc'><Outlet /></main>
+      <main className="min-h-calc"><Outlet /></main>
     </section>
   ) : null
 }
-
-export default App

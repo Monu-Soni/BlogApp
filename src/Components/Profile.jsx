@@ -1,9 +1,8 @@
-import { useEffect, useState } from "react";
+import { FaGithub, FaLinkedin, FaTwitter, FaInstagram, } from "react-icons/fa"
+import { useEffect, useState } from "react"
 import AuthService from "../appwrite/Auth"
+import { useSelector } from "react-redux"
 import { LogoutBtn } from "./index"
-import { useSelector } from 'react-redux'
-import { FaGithub, FaLinkedin, FaTwitter, FaInstagram, } from "react-icons/fa";
-
 
 const Profile = () => {
     const authStatus = useSelector((state) => state.Auth.status)
@@ -19,10 +18,8 @@ const Profile = () => {
             twitter: "https://twitter.com/amit",
             instagram: "https://instagram.com/amit",
         },
-    };
-
+    }
     const [userData, setuserData] = useState(null)
-
     useEffect(() => {
         const getdata = async () => {
             let user = await AuthService.getCurrentUser()
@@ -31,7 +28,6 @@ const Profile = () => {
         getdata()
     }, [])
     let User = userData
-
     if (User) {
         return (
             <div className="bg-slate-100 flex items-center justify-center p-6">
@@ -57,26 +53,22 @@ const Profile = () => {
                             <a href={user.social.github} target="_blank" rel="noreferrer" className="text-gray-700 hover:text-black transition">
                                 <FaGithub size={28} />
                             </a>
-
                             <a href={user.social.linkedin} target="_blank" rel="noreferrer" className="text-blue-700 hover:scale-110 transition">
                                 <FaLinkedin size={28} />
                             </a>
-
                             <a href={user.social.twitter} target="_blank" rel="noreferrer" className="text-sky-500 hover:scale-110 transition">
                                 <FaTwitter size={28} />
                             </a>
-
                             <a href={user.social.instagram} target="_blank" rel="noreferrer" className="text-pink-500 hover:scale-110 transition">
                                 <FaInstagram size={28} />
                             </a>
                         </div>
                     </div>
-                    {authStatus && (<div className='mx-4 text-center'><LogoutBtn /></div>)}
+                    {authStatus && (<div className="mx-4 text-center"><LogoutBtn /></div>)}
                 </div>
             </div>
         )
     }
     return <div>Loading...</div>
 }
-
 export default Profile

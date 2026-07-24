@@ -1,16 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import { PostCard } from '../Components/index'
-import Service from "../appwrite/Services";
+import Service from "../appwrite/Services"
 
-function AllPosts() {
+export default function AllPosts() {
     const [posts, setPosts] = useState([])
-
     useEffect(() => {
         Service.getPosts([]).then((posts) => {
             if (posts) { setPosts(posts.documents) }
         })
     }, [])
-
     if (posts.length === 0) {
         return (
             <div className="text-center">
@@ -27,5 +25,3 @@ function AllPosts() {
         )
     }
 }
-
-export default AllPosts

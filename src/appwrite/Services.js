@@ -2,9 +2,9 @@ import { Client, ID, Databases, Storage, Query } from "appwrite"
 import config from '../config/config'
 
 export class services {
-    client = new Client();
-    databases;
-    Bucket;
+    client = new Client()
+    databases
+    Bucket
 
     constructor() {
         this.client
